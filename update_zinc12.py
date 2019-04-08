@@ -4,7 +4,7 @@
 For Clean-Lead-Like and Standard-All-Purchasable
 """
 
-from mysync import MyHTTP
+from khemia.net import khHTTP as HTTP
 import re
 
 pat = re.compile('([0-9]+)_(.)([0-9]+)\.([0-9]+)\.sdf\.gz')
@@ -16,7 +16,7 @@ def name_key(a):
 
 ### Clean-Lead-Like
 
-http = MyHTTP('http://zinc.docking.org/db/bysubset/11')
+http = HTTP('http://zinc.docking.org/db/bysubset/11')
 http.set_local_dir('data/ZINC12/Clean-Lead-Like')
 http.download('usual.sdf.csh')
 
@@ -33,7 +33,7 @@ for name in names:
 
 ### Standard-All-Purchasable
 
-http = MyHTTP('http://zinc.docking.org/db/bysubset/6')
+http = HTTP('http://zinc.docking.org/db/bysubset/6')
 http.set_local_dir('data/ZINC12/Standard-All-Purchasable')
 http.download('usual.sdf.csh')
 

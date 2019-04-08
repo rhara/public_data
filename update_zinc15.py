@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from mysync import MyHTTP
+from khemia.net import khHTTP as HTTP
 import os, itertools, re
 
-http = MyHTTP('http://files.docking.org/2D')
+http = HTTP('http://files.docking.org/2D')
 
 http.set_local_dir('data/ZINC15')
 

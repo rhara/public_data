@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from mysync import MyFTP
+from khemia.net import khFTP as FTP
 
-ftp = MyFTP('ftp://ftp.ebi.ac.uk/pub/databases/chebi/SDF')
+ftp = FTP('ftp://ftp.ebi.ac.uk/pub/databases/chebi/SDF')
 ftp.set_local_dir('data/ChEBI')
 
 ftp.download('ChEBI_complete.sdf.gz')
